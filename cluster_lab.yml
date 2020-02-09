@@ -38,7 +38,7 @@
       shell: /bin/systemctl disable systemd-resolved
     - name: Delete false resolv.conf
       file: 
-        pateh: /etc/resolv.conf.*
+        path: /etc/resolv.conf.*
         state: absent
 
 - hosts: k8s-cluster
