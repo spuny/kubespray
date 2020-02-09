@@ -37,7 +37,9 @@
     - name: Disable systemd service
       shell: /bin/systemctl disable systemd-resolved
     - name: Delete false resolv.conf
-      shell: /bin/rm /etc/resolv.conf.*
+      file: 
+        pateh: /etc/resolv.conf.*
+        state: absent
 
 - hosts: k8s-cluster
   tasks:
