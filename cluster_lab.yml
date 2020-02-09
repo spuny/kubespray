@@ -55,7 +55,7 @@
     - name: Intall package ceph-common
       package:
         name: ceph-common
-        state: pressent
+        state: present
     - name: Install another usefull packages
       apt:
         pkg:
