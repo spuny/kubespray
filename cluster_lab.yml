@@ -58,13 +58,18 @@
       package:
         name: ceph-common
         state: present
-    - name: Install another usefull packages
+    - name: Install package for ceph-disk
+      package:
+        name: ceph-osd
+        state: present
+    - name: Install usefull packages
       apt:
         pkg:
           - iotop
           - htop
           - nmap
           - sysstat
+
 
 - hosts: bastion[0]
   gather_facts: False
