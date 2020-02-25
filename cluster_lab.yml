@@ -62,15 +62,6 @@
       package:
         name: ceph-osd
         state: present
-    - name: Install usefull packages
-      apt:
-        pkg:
-          - iotop
-          - htop
-          - nmap
-          - sysstat
-          - libguestfs-tools
-
 
 - hosts: bastion[0]
   gather_facts: False
